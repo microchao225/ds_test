@@ -15,21 +15,23 @@ SndPointer reverse_singlenode(SndPointer singleNode){
     return pre;
 }
 
-int main(){
-    int data[]= {1,2,3,4,5,6,NULL};
-    SndPointer sndPointer=create_single_node1(data,7);
-    SndPointer result = reverse_singlenode(sndPointer);
-    std:: cout << result;
-}
+//int main(){
+//    int a = 1, b = 2, c = 3, d = 4, e = 5, f = 6;
+//    int* data[] = {&a, &b, &c, &d, &e, &f};
+//    SndPointer sndPointer=create_single_node1(data,6);
+//    SndPointer result = reverse_singlenode(sndPointer);
+//    std:: cout << result;
+//}
 
 
-SndPointer create_single_node1(int data[], int n){
+SndPointer create_single_node1(int* data[], int n){
     SndPointer current = (SndPointer)malloc(sizeof(SndPointer));
+    current->data = NULL;
     SndPointer head = current;
-    for (int i = 0; i < n; ++i){
+    for (int i = 0; i < n; i++){
         auto  *sndPointer = (SndPointer)malloc(sizeof(SndPointer));
         sndPointer->data= data[i];
-        sndPointer->next = nullptr;
+        sndPointer->next = NULL;
 
         current->next = sndPointer;
         current = sndPointer;
