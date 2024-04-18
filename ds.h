@@ -25,6 +25,7 @@ typedef struct SingleNode {
  */
 SndPointer create_linked_node(const std::vector<int> &data){
     auto head = new SingleNode();
+    head->data = NULL;
     SndPointer p = head;
     for (int item : data) {
         auto cur = new SingleNode();  // 使用 new
@@ -48,6 +49,16 @@ void print_linked_node(SndPointer sndPointer){
     }
 }
 
+std::vector<int> convert_to_vector(SndPointer sndPointer){
+    std::vector<int> result;
+    SndPointer head = sndPointer;
+    while(head!=NULL){
+        result.push_back(head->data);
+        head = head->next;
+    }
+    return result;
+}
+
 int search_k_snd(SndPointer sndPointer,int k);
 int search_k_snd2(SndPointer sndPointer,int k);
 int* move_p(int nums[],int p,int n);
@@ -59,3 +70,5 @@ int find_min_d(int a[],int a_length,int b[],int b_length,int c[],int c_length);
 bool is_min_triple(int a, int b, int c);
 int find_min_distance(int A[], int B[], int C[], int lena, int lenb, int lenc) ;
 SndPointer create_single_node1(int* data[], int n);
+int find_k_bf(SndPointer sndPointer,int k);
+int two_pointer_find_k(SndPointer sndPointer,int k);
