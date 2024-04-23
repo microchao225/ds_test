@@ -48,11 +48,11 @@ int removeElement(std::vector<int>& nums, int val) {
 //    }
 //}
 
-int main(){
-    std::vector v1 = {1,2,3,0,0,0};
-    std::vector v2 = {2,5,6};
-    merge(v1,3,v2,3);
-    for(int& num : v1){
-        std:: cout << num << ",";
-    }
-}
+//int main(){
+//    std::vector v1 = {1,2,3,0,0,0};
+//    std::vector v2 = {2,5,6};
+//    merge(v1,3,v2,3);
+//    for(int& num : v1){
+//        std:: cout << num << ",";
+//    }
+//}

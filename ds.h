@@ -72,3 +72,9 @@ int find_min_distance(int A[], int B[], int C[], int lena, int lenb, int lenc) ;
 SndPointer create_single_node1(int* data[], int n);
 int find_k_bf(SndPointer sndPointer,int k);
 int two_pointer_find_k(SndPointer sndPointer,int k);
+/**
+ * 获取正整数
+ * @param n
+ * @return
+ */
+int get_pos_integer(int n);
